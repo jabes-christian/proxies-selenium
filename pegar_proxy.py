@@ -3,12 +3,6 @@ from bs4 import BeautifulSoup
 import time
 
 class BuscarProxy:
-    """
-    Busca proxies do free-proxy-list.net, filtra HTTPS + anonimato (anonymous/elite),
-    testa com requests e grava arquivos:
-      - proxies.txt (todos listados filtrados)
-      - validado_proxies.txt (apenas os que responderam ao teste)
-    """
     URL = "https://free-proxy-list.net/"
 
     def __init__(self, test_url="https://meuip.com.br/", test_timeout=8, max_test=100):

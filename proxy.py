@@ -4,20 +4,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 class ExecutarProxy:
-    """
-    Roda o Selenium Chrome usando um proxy fornecido (ip:porta).
-    NOTAS:
-      - Esta implementação usa --ignore-certificate-errors para contornar certificados
-        inválidos que proxies mal configurados podem apresentar.
-      - Se proxy precisar de autenticação (user:pass), use selenium-wire ou uma extensão.
-    """
 
     def __init__(self, proxy, headless=False, page_timeout=30):
-        """
-        proxy: string "ip:porta"
-        headless: bool, se quiser rodar sem UI
-        page_timeout: tempo para carregar página antes de timeout
-        """
         self.proxy = proxy
         self.headless = headless
         self.page_timeout = page_timeout
